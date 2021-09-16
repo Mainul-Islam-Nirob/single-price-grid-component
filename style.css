@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+    --bl: #2BB3B1;
+    --btn: hsl(71, 73%, 54%);
+    --background: hsl(204, 43%, 93%);
+    --font-color: hsl(218, 22%, 67%);
+    --br: #4ABEBD;
+    --font-size: 62.5%;
+    --font-family: 'Karla',
+    sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size);
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+     min-height: 70vh;
+     max-width: 50vw;
+    border-radius: .5rem;
+    overflow: hidden;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1.2fr;
+     grid-template-areas: 
+        "top top"
+        "bl br";
+
+    margin: 3rem 0;
+   
+}
+.top{
+    grid-area: top;
+    background: #fff;
+    padding: 4rem;
+}
+.title{
+    color: var(--br);
+    padding: 1rem 0 2rem 0;
+}
+.subtitle{
+    color: var(--btn);
+    padding: 0 0 1.5rem 0;
+    font-weight: 400;
+}
+.description{
+    color: var(--font-color);
+    line-height: 2.5rem;
+}
+.bottom-left{
+    grid-area: bl;
+    background: var(--bl);
+    padding: 4rem;
+}
+.card-title{
+    color: #fff;
+    padding: 0 0 2rem 0;
+    font-weight: 200;
+}
+.price{ 
+    color: var(--background);
+}
+.dollar{
+    color: #fff;
+    font-size: 4rem;
+    padding-right: 1rem;
+}
+.card-description{
+    color: var(--background);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    line-height: 2.5rem;
+}
+.btn{
+    background-color: var(--btn);
+    padding: 1.5rem 0;
+    text-decoration: none;
+    color: #fff ;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 2.5rem;
+    border-radius: .5rem;
+}
+.bottom-right{
+    grid-area: br;
+    background: var(--br);
+    padding: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+       display: flex;
+       flex-direction: column;
+       min-width: 80vw;
+       min-height: 80vh;
+       margin: 2rem 0;
+    }
+    :root{
+        --font-size: 52%;
+    }
+}
